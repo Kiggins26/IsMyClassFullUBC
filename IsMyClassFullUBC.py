@@ -3,7 +3,7 @@ import BeautifulSoup
 import re
 import smtplib, ssl
 import getpass
-
+import time
 Newlines = re.compile(r'[\r\n]\s+')
 def getClassInfo(): #gets input from the user about their courses that are filled
     campus = raw_input("What campus do you attend? O or V?").upper()
@@ -60,3 +60,4 @@ while ClassFull:
         if "Total Seats Remaining:\n0" not in getSSCInfo(urls[j]):
             ClassFull = False
             server.sendmail("senderemail@gmail.com", "myemail@gmail.com", usersInfo[j+1]) + "has an empty spot")
+    time.sleep(60*5) #sleeps for 5 mins
