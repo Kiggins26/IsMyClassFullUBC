@@ -59,5 +59,6 @@ while ClassFull:
     for j in range(0,urls.len()):
         if "Total Seats Remaining:\n0" not in getSSCInfo(urls[j]):
             ClassFull = False
-            server.sendmail("senderemail@gmail.com", usersEmail, usersInfo[j+1]) + "has an empty spot")
+            server.sendmail("senderemail@gmail.com", usersEmail, usersInfo([j+1]) + "has an empty spot")
+
     time.sleep(60*5) #sleeps for 5 mins
