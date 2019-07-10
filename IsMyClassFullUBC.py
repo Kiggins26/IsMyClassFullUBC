@@ -42,7 +42,7 @@ def setUp(): #collects user's email
 usersEmail = setUp()
 usersInfo = getClassInfo()
 port = 465  # For SSL
-password = getpass.getpass('Password:')
+password = raw_input("Password:")
 # Create a secure SSL context
 context = ssl.create_default_context()
 with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
