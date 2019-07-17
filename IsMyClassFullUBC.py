@@ -9,7 +9,7 @@ def getClassInfo(): #gets input from the user about their courses that are fille
     campus = raw_input("What campus do you attend? O or V?").upper()
     numOfClasses = input("how many classes are full? Enter a numerical val such as 6:  ")
     info = [campus];
-    for i in range(6):
+    for i in range(numOfClasses):
         info.append(raw_input("what course are full? EX CPSC 111 101: [area course section]  ").upper())
     return info
 def getSSCInfo(url): # scrapes the UBC course catalog to see if there are any open spots
