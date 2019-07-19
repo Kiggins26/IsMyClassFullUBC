@@ -2,7 +2,7 @@ import urllib2
 import BeautifulSoup
 import re
 import smtplib, ssl
-import getpass
+#import getpass no longer needed
 import time
 Newlines = re.compile(r'[\r\n]\s+')
 def getClassInfo(): #gets input from the user about their courses that are filled
